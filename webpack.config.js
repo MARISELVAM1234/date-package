@@ -1,7 +1,7 @@
-const path = require('./src/index');
+const path = require('path');
 
 module.exports = {
-  entry: './src/index.ts', // Assuming your entry point is in the 'src' directory
+  entry: './src/index.ts', // Adjust the entry point as needed
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -9,10 +9,16 @@ module.exports = {
   module: {
     rules: [
       {
-        // use: 'ts-loader',
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        test: /\.txt$/,
-         use: 'raw-loader'
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        include: [
+          path.resolve(__dirname, 'node_modules/date-package-format/src'),
+        ],
       },
     ],
   },
