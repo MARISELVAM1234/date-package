@@ -11,14 +11,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/compat-data": "7.19.4",
     "@babel/core": "7.19.6",
     "@babel/generator": "7.19.6",
-    "@babel/compat-data": "7.19.4",
     "@babel/helper-compilation-targets": "7.19.3",
     "@babel/helper-create-class-features-plugin": "7.19.0",
     "@babel/helper-module-transforms": "7.19.6",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
-    "webpack": "^1.12.9"
+    "webpack": "^5.89.0"
   }
 }
