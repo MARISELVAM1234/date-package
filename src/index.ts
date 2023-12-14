@@ -1,4 +1,3 @@
-export function getCurrentDate(): string {
-    const currentDate = new Date();
-    return currentDate.toDateString();
-  }
+export const getCurrentDate = (): string => {
+  return new Date().toDateString();
+};

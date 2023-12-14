@@ -1,18 +1,10 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./dist",
     "target": "es6",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true
+    "declaration": true,
+    "outDir": "./dist"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"],
-  "baseUrl": "./",
-  "paths": {
-    "*": ["src/*", "node_modules/*"]
-  }
+  "exclude": ["node_modules"]
 }
-
