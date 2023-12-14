@@ -7,9 +7,13 @@ module.exports = {
           exclude: /node_modules/,
           use: {
             loader: 'ts-loader',
-            // options: { // Remove transpileOnly temporarily
-            //   transpileOnly: true,
-            // },
+          },
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader', // or any other JavaScript loader you use
           },
         },
       ],
