@@ -7,9 +7,9 @@ module.exports = {
           exclude: /node_modules/,
           use: {
             loader: 'ts-loader',
-            options: {
-              transpileOnly: true, // set to true if using fork-ts-checker-webpack-plugin for type checking
-            },
+            // options: { // Remove transpileOnly temporarily
+            //   transpileOnly: true,
+            // },
           },
         },
       ],
@@ -19,3 +19,4 @@ module.exports = {
     },
     // ... other configuration options
   };
+  
