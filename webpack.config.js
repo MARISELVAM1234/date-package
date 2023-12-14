@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('./src/index');
 
 module.exports = {
   entry: './src/index.ts', // Assuming your entry point is in the 'src' directory
@@ -9,9 +9,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        // use: 'ts-loader',
         exclude: /node_modules/,
+        test: /\.txt$/,
+         use: 'raw-loader'
       },
     ],
   },
