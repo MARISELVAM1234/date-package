@@ -1,26 +1,23 @@
+const path = require('path');
+
 module.exports = {
-    // ... other configuration options
-    module: {
-      rules: [
-        {
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'ts-loader',
-          },
-        },
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader', // or any other JavaScript loader you use
-          },
-        },
-      ],
-    },
-    resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
-    },
-    // ... other configuration options
-  };
+  entry: './src/index.ts', // Assuming your entry point is in the 'src' directory
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  // Add any plugins or additional configurations as needed
+};
   
